@@ -5,12 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YouTube Embed Example</title>
   <style>
+    /* Background and color theme */
+    body {
+      background-color: #0a1a2a; /* Dark blue background */
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Carbon fiber effect */
+    .carbon-fiber {
+      background: repeating-linear-gradient(
+        45deg,
+        #0a1a2a,
+        #0a1a2a 10px,
+        #0f1f30 10px,
+        #0f1f30 20px
+      );
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+    }
+
     /* Container for responsive video */
     .video-container {
       position: relative;
-      width: 100%;
+      width: 80%;
       padding-bottom: 56.25%; /* 16:9 aspect ratio */
       height: 0;
+      margin: 20px auto;
+      border: 2px solid #1a2f4f;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
     .video-container iframe {
@@ -21,30 +52,46 @@
       height: 100%;
     }
 
-    /* Style to hide video for audio-only playback */
-    .audio-only {
-      width: 0;
-      height: 0;
-      border: none;
-      overflow: hidden;
+    /* Button styling */
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
     }
 
-    /* Button styling */
-    .play-button {
-      display: inline-block;
-      padding: 10px 20px;
+    .button {
+      padding: 12px 24px;
       font-size: 16px;
-      cursor: pointer;
-      background-color: #007bff;
-      color: white;
-      border: none;
+      color: #ffffff;
+      background-color: #1e3a5c;
+      border: 2px solid #294b6d;
       border-radius: 5px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: 0.3s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: #294b6d;
+      border-color: #3a5c7e;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+    }
+
+    .button:active {
+      transform: scale(0.95);
     }
   </style>
 </head>
 <body>
 
-  <h1>Embedded YouTube Video</h1>
+  <div class="carbon-fiber">
+    <h1>YouTube Embed Example</h1>
+    <p>Select a category below to watch related content.</p>
+  </div>
 
   <!-- Responsive Video Embed -->
   <div class="video-container">
@@ -56,30 +103,15 @@
     </iframe>
   </div>
 
-  <h2>Embedded YouTube Audio Only (Click to Play)</h2>
-
-  <!-- Optional Audio-Only Embed (hidden video) with play button -->
-  <button class="play-button" onclick="playAudio()">Play Audio</button>
-  
-  <iframe 
-    id="audioOnlyEmbed" 
-    class="audio-only" 
-    src="https://www.youtube.com/embed/J10XusUuFRA?autoplay=1&mute=0" 
-    allow="autoplay" 
-    allowfullscreen>
-  </iframe>
-
-  <script>
-    function playAudio() {
-      const audioIframe = document.getElementById('audioOnlyEmbed');
-      audioIframe.style.width = '300px'; // Temporarily resize to ensure playback
-      audioIframe.style.height = '150px';
-      setTimeout(() => {
-        audioIframe.style.width = '0';
-        audioIframe.style.height = '0';
-      }, 500); // Hide again after a short delay
-    }
-  </script>
+  <!-- Buttons for Categories -->
+  <div class="button-container">
+    <a href="#" class="button">Prayers</a>
+    <a href="#" class="button">Sleep</a>
+    <a href="#" class="button">Ethereal</a>
+    <a href="#" class="button">Ambient</a>
+    <a href="#" class="button">Atmospheric</a>
+    <a href="#" class="button">Instrumentals</a>
+  </div>
 
 </body>
 </html>
