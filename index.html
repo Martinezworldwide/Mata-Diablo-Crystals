@@ -21,12 +21,24 @@
       height: 100%;
     }
 
-    /* Optional style to hide video for audio-only playback */
+    /* Style to hide video for audio-only playback */
     .audio-only {
       width: 0;
       height: 0;
       border: none;
       overflow: hidden;
+    }
+
+    /* Button styling */
+    .play-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
     }
   </style>
 </head>
@@ -44,14 +56,30 @@
     </iframe>
   </div>
 
-  <h2>Embedded YouTube Audio Only (Optional)</h2>
+  <h2>Embedded YouTube Audio Only (Click to Play)</h2>
 
-  <!-- Optional Audio-Only Embed (hidden video) -->
+  <!-- Optional Audio-Only Embed (hidden video) with play button -->
+  <button class="play-button" onclick="playAudio()">Play Audio</button>
+  
   <iframe 
+    id="audioOnlyEmbed" 
     class="audio-only" 
     src="https://www.youtube.com/embed/J10XusUuFRA?autoplay=1&mute=0" 
-    allow="autoplay">
+    allow="autoplay" 
+    allowfullscreen>
   </iframe>
+
+  <script>
+    function playAudio() {
+      const audioIframe = document.getElementById('audioOnlyEmbed');
+      audioIframe.style.width = '300px'; // Temporarily resize to ensure playback
+      audioIframe.style.height = '150px';
+      setTimeout(() => {
+        audioIframe.style.width = '0';
+        audioIframe.style.height = '0';
+      }, 500); // Hide again after a short delay
+    }
+  </script>
 
 </body>
 </html>
