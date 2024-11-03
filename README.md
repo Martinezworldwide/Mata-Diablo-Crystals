@@ -1,3 +1,3 @@
 # Youtube-Playlists
 
-https://www.martinezworldwide.github.io/Youtube-Playlists
+https://martinezworldwide.github.io/Youtube-Playlists
