@@ -1,0 +1,310 @@
+/* The Prayer Deck — Mata Diablo Crystals
+   Night ledger palette: deep indigo night, ember accents, scripture in serif. */
+
+:root {
+  --night-0: #060a14;
+  --night-1: #0b1224;
+  --night-2: #101a33;
+  --line: #223354;
+  --line-bright: #33507d;
+  --ember: #ff7a3c;
+  --ember-hot: #ffb066;
+  --ember-dim: #a84e1f;
+  --text: #e8e2d4;
+  --text-dim: #9aa7c0;
+  --gold: #d9b36a;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(255, 122, 60, 0.08), transparent 60%),
+    radial-gradient(900px 500px at 10% 110%, rgba(60, 90, 160, 0.10), transparent 60%),
+    linear-gradient(180deg, var(--night-0), var(--night-1) 40%, var(--night-0));
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* faint starfield */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,.5), transparent),
+    radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,.35), transparent),
+    radial-gradient(1.5px 1.5px at 60% 20%, rgba(255,255,255,.4), transparent),
+    radial-gradient(1px 1px at 80% 50%, rgba(255,255,255,.3), transparent),
+    radial-gradient(1px 1px at 90% 80%, rgba(255,255,255,.45), transparent),
+    radial-gradient(1px 1px at 10% 85%, rgba(255,255,255,.3), transparent);
+  opacity: .5;
+}
+
+header.site {
+  text-align: center;
+  padding: 56px 20px 28px;
+  position: relative;
+}
+
+header.site .kicker {
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  font-size: .72rem;
+  color: var(--ember);
+  margin-bottom: 14px;
+}
+
+header.site h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin: 0 0 10px;
+  letter-spacing: .04em;
+  text-shadow: 0 0 30px rgba(255, 122, 60, .25);
+}
+
+header.site p.sub {
+  color: var(--text-dim);
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+
+nav.site-links {
+  margin-top: 22px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav.site-links a {
+  color: var(--text-dim);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: .85rem;
+  transition: all .2s;
+}
+
+nav.site-links a:hover {
+  color: var(--text);
+  border-color: var(--ember);
+  box-shadow: 0 0 14px rgba(255, 122, 60, .15);
+}
+
+main { max-width: 900px; margin: 0 auto; padding: 10px 18px 80px; }
+
+/* Today's Prayer */
+.today-label {
+  text-align: center;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  font-size: .7rem;
+  color: var(--ember);
+  margin: 34px 0 14px;
+}
+
+#deck-featured { margin-bottom: 44px; }
+
+/* Card anatomy */
+.deck-card {
+  background: linear-gradient(180deg, rgba(16, 26, 51, .9), rgba(11, 18, 36, .95));
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px 24px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, .45);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.deck-card.featured {
+  border-color: var(--ember-dim);
+  box-shadow: 0 0 0 1px rgba(255, 122, 60, .25), 0 18px 60px rgba(0, 0, 0, .55), 0 0 60px rgba(255, 122, 60, .10);
+  background: linear-gradient(180deg, rgba(24, 20, 34, .95), rgba(14, 12, 24, .97));
+}
+
+.card-head { display: flex; gap: 14px; align-items: flex-start; }
+
+.card-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  padding-top: 4px;
+  filter: drop-shadow(0 0 8px rgba(255, 122, 60, .35));
+}
+
+.card-title-wrap h2 {
+  margin: 0 0 8px;
+  font-size: 1.18rem;
+  line-height: 1.35;
+  letter-spacing: .01em;
+}
+
+.card-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+
+.tag {
+  font-size: .7rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(217, 179, 106, .4);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+.badge {
+  font-size: .68rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+.badge-today {
+  color: #120a04;
+  background: linear-gradient(90deg, var(--ember), var(--ember-hot));
+  border: none;
+  font-weight: 700;
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 122, 60, .55); }
+  50% { box-shadow: 0 0 0 7px rgba(255, 122, 60, 0); }
+}
+
+.card-desc { color: var(--text-dim); font-size: .94rem; line-height: 1.6; margin: 14px 0 0; }
+
+.card-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .5s ease;
+  border-top: 1px dashed var(--line);
+  margin-top: 14px;
+}
+
+.card-body > * { padding-top: 14px; }
+
+.card-body p { line-height: 1.75; margin: 0 0 14px; font-size: .98rem; }
+
+.card-body h3 {
+  font-size: .95rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ember);
+  margin: 18px 0 10px;
+}
+
+.card-body .verse {
+  border-left: 3px solid var(--ember-dim);
+  padding: 10px 14px;
+  background: rgba(255, 122, 60, .05);
+  border-radius: 0 10px 10px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  color: #f3ead9;
+}
+
+.card-body .verse .ref {
+  display: block;
+  font-style: normal;
+  font-size: .75rem;
+  color: var(--text-dim);
+  margin-top: 6px;
+  letter-spacing: .06em;
+}
+
+.litany p { margin-bottom: 8px; }
+.litany .resp {
+  display: inline-block;
+  color: var(--ember);
+  font-size: .8rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.spine {
+  background: rgba(10, 16, 32, .8);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-top: 18px;
+}
+
+.spine strong { color: var(--gold); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; }
+
+.spine ul { margin: 10px 0 0; padding-left: 18px; }
+.spine li { margin-bottom: 8px; line-height: 1.6; font-size: .9rem; color: var(--text-dim); }
+.spine .sref { color: var(--ember-hot); font-weight: 600; }
+
+.card-actions { margin-top: 16px; display: flex; gap: 10px; }
+
+.card-actions button {
+  font: inherit;
+  font-size: .85rem;
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 9px 20px;
+  border: 1px solid var(--ember-dim);
+  background: transparent;
+  color: var(--ember-hot);
+  transition: all .2s;
+}
+
+.card-actions button:hover {
+  background: rgba(255, 122, 60, .12);
+  box-shadow: 0 0 16px rgba(255, 122, 60, .2);
+}
+
+.card-actions .copy-btn { border-color: var(--line-bright); color: var(--text-dim); }
+.card-actions .copy-btn:hover { color: var(--text); border-color: var(--ember); background: transparent; }
+
+/* The stacked deck */
+#deck-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.deck-slot { transition: transform .3s ease; }
+
+.deck-slot:hover { transform: translateY(-4px); }
+.deck-slot:hover .deck-card { border-color: var(--line-bright); box-shadow: 0 22px 50px rgba(0, 0, 0, .55); }
+
+.deck-card.lit { border-color: var(--ember); }
+
+.deck-foot {
+  margin-top: 44px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: .85rem;
+  line-height: 1.7;
+}
+
+.deck-foot .rule {
+  border-top: 1px solid var(--line);
+  max-width: 420px;
+  margin: 0 auto 16px;
+  padding-top: 16px;
+}
+
+footer.site {
+  text-align: center;
+  padding: 30px 20px 50px;
+  color: #5c6b8c;
+  font-size: .8rem;
+  letter-spacing: .05em;
+}
+
+@media (max-width: 560px) {
+  .deck-card { padding: 18px; }
+  .card-icon { font-size: 1.3rem; }
+}

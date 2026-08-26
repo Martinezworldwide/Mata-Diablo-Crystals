@@ -4,141 +4,125 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mata Diablo Crystals</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    /* Background and color theme */
-    body {
-      background-color: #0a1a2a; /* Dark blue background */
-      font-family: Arial, sans-serif;
-      color: #ffffff;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* Carbon fiber effect */
-    .carbon-fiber {
-      background: repeating-linear-gradient(
-        45deg,
-        #0a1a2a,
-        #0a1a2a 10px,
-        #0f1f30 10px,
-        #0f1f30 20px
-      );
+    /* Hub-specific additions on top of the deck stylesheet */
+    .lanes { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 18px; margin-top: 30px; }
+    .lane {
+      background: linear-gradient(180deg, rgba(16, 26, 51, .9), rgba(11, 18, 36, .95));
+      border: 1px solid var(--line);
+      border-radius: 16px;
       padding: 20px;
-      width: 100%;
       text-align: center;
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
     }
-
-    /* Container for responsive video */
-    .video-container {
-      position: relative;
-      width: 80%;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
-      height: 0;
-      margin: 20px auto;
-      border: 2px solid #1a2f4f;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    /* Button styling */
-    .button-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 20px;
-      margin-bottom: 30px;
-    }
-
-    .button {
-      padding: 12px 24px;
-      font-size: 16px;
-      color: #ffffff;
-      background-color: #1e3a5c;
-      border: 2px solid #294b6d;
-      border-radius: 5px;
-      cursor: pointer;
-      text-transform: uppercase;
-      transition: 0.3s;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      text-decoration: none;
+    .lane:hover { transform: translateY(-4px); border-color: var(--line-bright); }
+    .lane.live { border-color: var(--ember-dim); box-shadow: 0 0 24px rgba(255, 122, 60, .12); }
+    .lane .l-icon { font-size: 1.9rem; filter: drop-shadow(0 0 10px rgba(255, 122, 60, .3)); }
+    .lane h3 { margin: 12px 0 6px; font-size: 1.05rem; }
+    .lane p { color: var(--text-dim); font-size: .85rem; line-height: 1.5; margin: 0; }
+    .lane .l-state {
       display: inline-block;
+      margin-top: 12px;
+      font-size: .68rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      padding: 4px 12px;
     }
-
-    .button:hover {
-      background-color: #294b6d;
-      border-color: #3a5c7e;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+    .l-state.live-tag { color: #120a04; background: linear-gradient(90deg, var(--ember), var(--ember-hot)); font-weight: 700; }
+    .l-state.soon-tag { color: var(--text-dim); border: 1px solid var(--line); }
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 720px;
+      margin: 34px auto 0;
+      aspect-ratio: 16 / 9;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, .5);
     }
-
-    .button:active {
-      transform: scale(0.95);
-    }
-
-    .button.featured {
-      background-color: #7a1f1f;
-      border-color: #a03030;
-    }
-
-    .button.featured:hover {
-      background-color: #a03030;
-      border-color: #c04040;
-    }
-
-    .button.disabled {
-      opacity: 0.45;
-      cursor: not-allowed;
-      box-shadow: none;
+    .video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .section-label {
+      text-align: center;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      font-size: .7rem;
+      color: var(--ember);
+      margin: 46px 0 0;
     }
   </style>
 </head>
 <body>
 
-  <div class="carbon-fiber">
+  <header class="site">
+    <div class="kicker">The Devil-Killer's Armory</div>
     <h1>Mata Diablo Crystals</h1>
-    <p>Select a category below to watch related content.</p>
-  </div>
+    <p class="sub">Prayers that hold the line, and sound that quiets the night. Every word verified, every lane built to grow — the devil is already defeated, we just keep the receipts.</p>
+    <nav class="site-links">
+      <a href="prayers.html">Prayers</a>
+      <a href="https://martinezworldwide.github.io/PrayerGenerator/">The Prayer Deck</a>
+      <a href="https://martinezworldwide.github.io/engineering-mall/">Engineering Mall</a>
+    </nav>
+  </header>
 
-  <!-- Responsive Video Embed -->
-  <div class="video-container">
-    <iframe
-      src="https://www.youtube.com/embed/J10XusUuFRA"
-      frameborder="0"
-      allow="autoplay; encrypted-media"
-      allowfullscreen>
-    </iframe>
-  </div>
+  <main>
+    <div class="section-label">The watch</div>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/J10XusUuFRA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
 
-  <!-- Buttons for Categories -->
-  <div class="button-container">
-    <a href="prayers.html" class="button featured">Prayers</a>
-    <span class="button disabled" title="Opening soon">Sleep</span>
-    <span class="button disabled" title="Opening soon">Ethereal</span>
-    <span class="button disabled" title="Opening soon">Ambient</span>
-    <span class="button disabled" title="Opening soon">Atmospheric</span>
-    <span class="button disabled" title="Opening soon">Instrumentals</span>
-  </div>
+    <div class="section-label">Lanes</div>
+    <div class="lanes">
+      <a href="prayers.html" class="lane live" style="text-decoration:none;color:inherit;">
+        <div class="l-icon">🙏</div>
+        <h3>Prayers</h3>
+        <p>The Prayer Deck — daily cards with verified Douay-Rheims Scripture.</p>
+        <span class="l-state live-tag">Live · updated daily</span>
+      </a>
+      <div class="lane">
+        <div class="l-icon">😴</div>
+        <h3>Sleep</h3>
+        <p>Ethereal ambience for the night watch — the dark fought with sound, not silence.</p>
+        <span class="l-state soon-tag">On the way · YouTube</span>
+      </div>
+      <div class="lane">
+        <div class="l-icon">🌫️</div>
+        <h3>Ethereal</h3>
+        <p>Atmospheric instrumentals, slow and weightless, made for closed eyes.</p>
+        <span class="l-state soon-tag">On the way · YouTube</span>
+      </div>
+      <div class="lane">
+        <div class="l-icon">🎐</div>
+        <h3>Ambient</h3>
+        <p>Long pads and soft bells — soundscapes that outlast the nightmares.</p>
+        <span class="l-state soon-tag">On the way · YouTube</span>
+      </div>
+      <div class="lane">
+        <div class="l-icon">🌌</div>
+        <h3>Atmospheric</h3>
+        <p>Wide, dark, cinematic textures for deep rest and deeper prayer.</p>
+        <span class="l-state soon-tag">On the way · YouTube</span>
+      </div>
+      <div class="lane">
+        <div class="l-icon">🎹</div>
+        <h3>Instrumentals</h3>
+        <p>No words, no noise — only the room the Spirit can enter.</p>
+        <span class="l-state soon-tag">On the way · YouTube</span>
+      </div>
+    </div>
 
-  <!-- Prayer section teaser -->
-  <div class="carbon-fiber" style="border-top: 2px solid #1a2f4f;">
-    <h2>Prayers</h2>
-    <p>The Prayer Against False Apostles, False Prophets, and False Priests — with every verse verified at the Douay-Rheims source.</p>
-    <p style="margin-top: 12px;">
-      <a href="prayers.html" class="button featured">Read the Prayer</a>
-    </p>
-  </div>
+    <div class="deck-foot">
+      <div class="rule">
+        The five sound lanes are being filled with videos now. One sleep instrument, one verified prayer, one deck at a time.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site">
+    Mata Diablo Crystals · Martinez Worldwide Group · The devil is already defeated — the ledger just keeps receipts.
+  </footer>
 
 </body>
 </html>
