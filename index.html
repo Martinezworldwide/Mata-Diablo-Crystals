@@ -59,6 +59,7 @@
       justify-content: center;
       gap: 15px;
       margin-top: 20px;
+      margin-bottom: 30px;
     }
 
     .button {
@@ -73,6 +74,7 @@
       transition: 0.3s;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
       text-decoration: none;
+      display: inline-block;
     }
 
     .button:hover {
@@ -83,6 +85,22 @@
 
     .button:active {
       transform: scale(0.95);
+    }
+
+    .button.featured {
+      background-color: #7a1f1f;
+      border-color: #a03030;
+    }
+
+    .button.featured:hover {
+      background-color: #a03030;
+      border-color: #c04040;
+    }
+
+    .button.disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      box-shadow: none;
     }
   </style>
 </head>
@@ -95,22 +113,31 @@
 
   <!-- Responsive Video Embed -->
   <div class="video-container">
-    <iframe 
-      src="https://www.youtube.com/embed/J10XusUuFRA" 
-      frameborder="0" 
-      allow="autoplay; encrypted-media" 
+    <iframe
+      src="https://www.youtube.com/embed/J10XusUuFRA"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
       allowfullscreen>
     </iframe>
   </div>
 
   <!-- Buttons for Categories -->
   <div class="button-container">
-    <a href="prayers.html" class="button">Prayers</a>
-    <a href="#" class="button">Sleep</a>
-    <a href="#" class="button">Ethereal</a>
-    <a href="#" class="button">Ambient</a>
-    <a href="#" class="button">Atmospheric</a>
-    <a href="#" class="button">Instrumentals</a>
+    <a href="prayers.html" class="button featured">Prayers</a>
+    <span class="button disabled" title="Opening soon">Sleep</span>
+    <span class="button disabled" title="Opening soon">Ethereal</span>
+    <span class="button disabled" title="Opening soon">Ambient</span>
+    <span class="button disabled" title="Opening soon">Atmospheric</span>
+    <span class="button disabled" title="Opening soon">Instrumentals</span>
+  </div>
+
+  <!-- Prayer section teaser -->
+  <div class="carbon-fiber" style="border-top: 2px solid #1a2f4f;">
+    <h2>Prayers</h2>
+    <p>The Prayer Against False Apostles, False Prophets, and False Priests — with every verse verified at the Douay-Rheims source.</p>
+    <p style="margin-top: 12px;">
+      <a href="prayers.html" class="button featured">Read the Prayer</a>
+    </p>
   </div>
 
 </body>

@@ -3,58 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prayer</title>
+    <title>Prayers — Mata Diablo Crystals</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            font-family: Georgia, 'Times New Roman', serif;
+            background-color: #0a1a2a;
+            color: #e8e2d4;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
         header {
             width: 100%;
-            padding: 15px;
-            background-color: #003366;
+            padding: 18px 15px;
+            background: repeating-linear-gradient(
+                45deg,
+                #0a1a2a,
+                #0a1a2a 10px,
+                #0f1f30 10px,
+                #0f1f30 20px
+            );
             color: white;
             text-align: center;
+            border-bottom: 2px solid #1a2f4f;
         }
-        h1 {
-            margin: 0;
-        }
-        nav {
-            margin-top: 15px;
-        }
+        h1 { margin: 0; font-size: 1.8rem; }
+        nav { margin-top: 12px; }
         nav a {
-            color: #003366;
+            color: #8fb3d9;
             text-decoration: none;
             margin: 0 10px;
             font-weight: bold;
         }
-        iframe {
-            width: 100%;
-            max-width: 1200px;
-            height: 90vh;
-            border: none;
-            margin-top: 20px;
+        nav a:hover { color: #ffffff; }
+
+        main {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
+            line-height: 1.9;
+            font-size: 1.05rem;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .intro h2 { color: #c9a24b; margin-bottom: 8px; }
+        .intro p { color: #9db4cc; font-style: italic; }
+
+        .prayer-card {
+            background: #0f1f30;
+            border: 1px solid #1a2f4f;
+            border-left: 4px solid #c9a24b;
+            border-radius: 10px;
+            padding: 28px 26px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .prayer-card h3 {
+            color: #c9a24b;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            margin: 26px 0 10px;
+        }
+        .prayer-card h3:first-child { margin-top: 0; }
+
+        .litany p { margin: 12px 0; }
+        .resp { color: #c9a24b; font-style: italic; }
+
+        .spine {
+            margin-top: 26px;
+            padding-top: 16px;
+            border-top: 1px solid #1a2f4f;
+            font-size: 0.88rem;
+            color: #9db4cc;
+        }
+        .spine li { margin: 6px 0; }
+        .sref { color: #c9a24b; }
+
+        .actions { text-align: center; margin: 34px 0 10px; }
+        .button {
+            display: inline-block;
+            padding: 13px 26px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            background-color: #7a1f1f;
+            border: 2px solid #a03030;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .button:hover { background-color: #a03030; border-color: #c04040; }
+        .button:active { transform: scale(0.95); }
+
+        .gen-note {
+            text-align: center;
+            color: #9db4cc;
+            font-size: 0.92rem;
+            font-style: italic;
+            margin-top: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 16px;
+            background-color: #0f1f30;
+            color: #7d94ab;
+            font-size: 0.85em;
+            border-top: 1px solid #1a2f4f;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Prayer Page</h1>
+    <h1>Prayers</h1>
     <nav>
         <a href="index.html">Home</a>
-        <a href="prayer.html">Prayer</a>
+        <a href="https://martinezworldwide.github.io/PrayerGenerator/" target="_blank" rel="noopener">Daily Prayer Generator</a>
     </nav>
 </header>
 
 <main>
-    <iframe src="https://divineoffice.org" title="Divine Office Prayers"></iframe>
+    <div class="intro">
+        <h2>The Prayer Against False Apostles, False Prophets, and False Priests</h2>
+        <p>Every verse verified verbatim at the Douay-Rheims 1899 source. Say it, adapt it, share it.</p>
+    </div>
+
+    <div class="prayer-card">
+        <p>In the name of the Father, and of the Son, and of the Holy Ghost. Amen.</p>
+
+        <p>Lord Jesus Christ, Teacher of teachers, Judge of judges, You warned us Yourself: many will come in Your name and preach Your word, and their works will betray them. Open our eyes. Give us the discernment that sees the wolf under the wool, the angel of light who serves the dark. We ask it not in suspicion of Your Church, but in love of her, for the thief climbs in to steal, kill, and destroy, and You came that we might have life.</p>
+
+        <h3>Litany</h3>
+        <div class="litany">
+            <p>From false apostles, who transform themselves into apostles of Christ,<br /><span class="resp">deliver us, Lord.</span></p>
+            <p>From false prophets, who come in the clothing of sheep and are inwardly ravening wolves,<br /><span class="resp">deliver us, Lord.</span></p>
+            <p>From priests who preach Your word and bless the sword, who teach men to trust in armies and not in You,<br /><span class="resp">deliver us, Lord.</span></p>
+            <p>From the spirit that prays for war in the name of peace, and calls the killing of enemies the will of God,<br /><span class="resp">deliver us, Lord.</span></p>
+            <p>For You said: all that take the sword shall perish with the sword. And You said: love your enemies, pray for them that persecute you. From every teacher who inverts Your words to serve the powers of this world,<br /><span class="resp">deliver us, Lord.</span></p>
+            <p>From those who preach a cheap salvation: believe and be saved, nothing more, nothing changed,<br /><span class="resp">deliver us, Lord.</span></p>
+            <p>For the demons believe there is one God, and they believe it well, and they tremble. From a faith that believes without trembling, and trembles without obeying,<br /><span class="resp">deliver us, Lord.</span></p>
+            <p>From those who deny the cleansing fire, who preach that nothing after this life burns away the dross,<br /><span class="resp">deliver us, Lord.</span></p>
+            <p>From those who deny the everlasting fire, who flatter the sinner that hell is a fable,<br /><span class="resp">deliver us, Lord.</span></p>
+            <p>From those who say Lord, Lord, and do not the will of Your Father, who prophesy in Your name and work iniquity,<br /><span class="resp">deliver us, Lord.</span></p>
+            <p>That we may not be counted among those to whom You will say: I never knew you, depart from me,<br /><span class="resp">deliver us, Lord.</span></p>
+            <p>That we may be peacemakers, children of God,<br /><span class="resp">deliver us, Lord.</span></p>
+            <p>That we may pray for the dead, that they may be loosed from their sins,<br /><span class="resp">deliver us, Lord.</span></p>
+        </div>
+
+        <h3>Closing Prayer</h3>
+        <p>Lord God, save us from the faith of demons. Give us the faith that works by charity: faith that feeds the hungry, clothes the naked, forgives the enemy, keeps Your commandments, and fears Your judgment while hoping in Your mercy. We believe in You, and we ask for the works that prove it, for faith without works is dead.</p>
+
+        <p>Remind us of the four last things: death, judgment, heaven, and hell. Keep us from the flattery of those who soften Your justice to win our ears. Send us teachers who speak Your whole word, the comfort and the warning, the mercy and the fire.</p>
+
+        <p>And for the priests and pastors who have blessed the sword and taught men to trust in chariots and horses: if they have done it in blindness, open their eyes; if in pride, break their pride. Let Your Church be the bride You died for, not a chaplain to empires.</p>
+
+        <p>We ask it in the name of Jesus Christ, who is the same yesterday, today, and forever, and who will come again to judge the living and the dead. Amen.</p>
+
+        <div class="spine">
+            <strong>Scripture spine — Douay-Rheims 1899, verified at source:</strong>
+            <ul>
+                <li><span class="sref">Matthew 7:15</span> — Beware of false prophets, who come to you in the clothing of sheep, but inwardly they are ravening wolves.</li>
+                <li><span class="sref">Matthew 7:22-23</span> — Lord, Lord, have not we prophesied in thy name, and cast out devils in thy name, and done many miracles in thy name? And then will I profess unto them, I never knew you: depart from me, you that work iniquity.</li>
+                <li><span class="sref">James 2:19</span> — Thou believest that there is one God. Thou dost well: the devils also believe and tremble.</li>
+                <li><span class="sref">James 2:26</span> — For even as the body without the spirit is dead; so also faith without works is dead.</li>
+                <li><span class="sref">2 Corinthians 11:13-15</span> — For such false apostles are deceitful workmen, transforming themselves into the apostles of Christ. And no wonder: for Satan himself transformeth himself into an angel of light. Therefore it is no great thing if his ministers be transformed as the ministers of justice, whose end shall be according to their works.</li>
+                <li><span class="sref">Matthew 26:52</span> — Put up again thy sword into its place: for all that take the sword shall perish with the sword.</li>
+                <li><span class="sref">Matthew 5:44</span> — Love your enemies: do good to them that hate you: and pray for them that persecute and calumniate you.</li>
+                <li><span class="sref">1 Corinthians 3:15</span> — If any man's work burn, he shall suffer loss; but he himself shall be saved, yet so as by fire.</li>
+                <li><span class="sref">2 Maccabees 12:46</span> — It is therefore a holy and wholesome thought to pray for the dead, that they may be loosed from sins.</li>
+                <li><span class="sref">Matthew 25:41</span> — Depart from me, you cursed, into everlasting fire which was prepared for the devil and his angels.</li>
+                <li><span class="sref">Matthew 25:46</span> — And these shall go into everlasting punishment: but the just, into life everlasting.</li>
+                <li><span class="sref">Revelation 21:8</span> — But the fearful, and unbelieving, and the abominable, and murderers, and whoremongers, and sorcerers, and idolaters, and all liars, they shall have their portion in the pool burning with fire and brimstone, which is the second death.</li>
+                <li><span class="sref">Hebrews 11:6</span> — But without faith it is impossible to please God. For he that cometh to God, must believe that he is, and is a rewarder to them that seek him.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="actions">
+        <a href="https://martinezworldwide.github.io/PrayerGenerator/" target="_blank" rel="noopener" class="button">Open the Daily Prayer Generator</a>
+    </div>
+    <p class="gen-note">Protection, gratitude, healing, spiritual warfare, and guidance — with a copy button and shareable themes.</p>
 </main>
+
+<footer>
+    <p>© Mata Diablo Crystals. Powered by Martinez Worldwide Group.</p>
+</footer>
 
 </body>
 </html>
