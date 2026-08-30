@@ -139,6 +139,46 @@ const PRAYERS = [
       { type: "p", text: "Show me the path to take today. Let Your Spirit lead me in truth. When the road forks and I cannot see, make my next step sure." },
       { type: "p", text: "I trust Your direction. Amen. Guide my steps, Lord. Amen." }
     ]
+  },
+
+  {
+    id: "sword-of-the-spirit",
+    title: "The Prayer of the Sword of the Spirit",
+    icon: "⚔️",
+    tag: "Warfare",
+    date: "2026-08-30",
+    desc: "For the only blade the ledger needs — the word of God, out of the mouth. The whole sword set, verified at the Douay-Rheims source.",
+    parts: [
+      { type: "p", text: "In the name of the Father, and of the Son, and of the Holy Ghost. Amen." },
+      { type: "p", text: "Lord Jesus Christ, whose mouth is a sharp two edged sword, arm me with the only weapon You ever carried. Not the hand-held blade: You sheathed Peter's sword and healed the ear it cut. The sword You bring cuts truth from lie, believer from deceiver, and it comes out of the mouth." },
+      { type: "verse", ref: "Ephesians 6:17", text: "And take unto you the helmet of salvation, and the sword of the Spirit (which is the word of God)." },
+      { type: "verse", ref: "Hebrews 4:12", text: "For the word of God is living and effectual, and more piercing than any two edged sword; and reaching unto the division of the soul and the spirit, of the joints also and the marrow, and is a discerner of the thoughts and intents of the heart." },
+      { type: "p", text: "Teach my mouth to be like the prophet's, made a sharp sword in the shadow of Your hand. Let every word I speak be tested by the Word before it leaves me. The enemy wears a name like a costume; the costume is a lie. Give me the tongue that answers lies with Scripture, not with argument — the Word is the blade, and the victory is already written." },
+      { type: "verse", ref: "Isaiah 49:2", text: "And he hath made my mouth like a sharp sword: in the shadow of his hand he hath protected me, and hath made me as a chosen arrow: in his quiver he hath hidden me." },
+      { type: "verse", ref: "Revelation 1:16", text: "And he had in his right hand seven stars. And from his mouth came out a sharp two edged sword: and his face was as the sun shineth in his power." },
+      { type: "verse", ref: "Revelation 19:15", text: "And out of his mouth proceedeth a sharp two edged sword; that with it he may strike the nations. And he shall rule them with a rod of iron; and he treadeth the winepress of the fierceness of the wrath of God the Almighty." },
+      { type: "p", text: "And keep my hand off the metal sword, Lord. You said: all that take the sword shall perish with the sword. The swords the disciples bought were for show, and You never drew one. The only blade that wins is the word out of the mouth, and the only battle that remains is the one already won on the Cross." },
+      { type: "verse", ref: "Matthew 10:34", text: "Do not think that I came to send peace upon earth: I came not to send peace, but the sword." },
+      { type: "verse", ref: "Matthew 26:52", text: "Then Jesus saith to him: Put up again thy sword into its place: for all that take the sword shall perish with the sword." },
+      { type: "verse", ref: "Luke 22:51", text: "But Jesus answering, said: Suffer ye thus far. And when he had touched his ear, he healed him." },
+      {
+        type: "spine",
+        heading: "The whole sword set — Douay-Rheims 1899, verified at source",
+        items: [
+          ["Ephesians 6:17", "And take unto you the helmet of salvation, and the sword of the Spirit (which is the word of God)."],
+          ["Hebrews 4:12", "For the word of God is living and effectual, and more piercing than any two edged sword; and reaching unto the division of the soul and the spirit, of the joints also and the marrow, and is a discerner of the thoughts and intents of the heart."],
+          ["Revelation 19:15", "And out of his mouth proceedeth a sharp two edged sword; that with it he may strike the nations. And he shall rule them with a rod of iron; and he treadeth the winepress of the fierceness of the wrath of God the Almighty."],
+          ["Revelation 1:16", "And he had in his right hand seven stars. And from his mouth came out a sharp two edged sword: and his face was as the sun shineth in his power."],
+          ["Isaiah 49:2", "And he hath made my mouth like a sharp sword: in the shadow of his hand he hath protected me, and hath made me as a chosen arrow: in his quiver he hath hidden me."],
+          ["Matthew 10:34", "Do not think that I came to send peace upon earth: I came not to send peace, but the sword."],
+          ["Matthew 26:52", "Then Jesus saith to him: Put up again thy sword into its place: for all that take the sword shall perish with the sword."],
+          ["Luke 22:36", "But they said: Nothing. Then said he unto them: But now he that hath a purse, let him take it, and likewise a scrip; and he that hath not, let him sell his coat, and buy a sword."],
+          ["Luke 22:38", "But they said: Lord, behold here are two swords. And he said to them, It is enough."],
+          ["Luke 22:51", "But Jesus answering, said: Suffer ye thus far. And when he had touched his ear, he healed him."]
+        ]
+      },
+      { type: "p", text: "We ask it in the name of Jesus Christ, who is the Word made flesh, and whose word will judge us on the last day. Amen." }
+    ]
   }
 ];
 
